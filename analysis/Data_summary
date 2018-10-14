@@ -1,0 +1,106 @@
+Participant 1:
+
+	Full Experiment:
+	
+		go trial theta: 9.7746
+		nogo trial theta: 9.5324
+
+		correct trial theta: 10.057
+		successful stop theta: 9.6074
+		failed stop theta: 8.6253
+		miss theta: 5.822
+		error theta: 12.5958
+
+	Baseline:
+
+		Theta: 10.8932
+
+Participant 2:
+
+	Full Experiment:
+
+		go trial theta: 16.9894
+		nogo trial theta: 19.494
+
+		correct trial theta: 15.5973
+		successful stop theta: 20.2027
+		failed stop theta: 17.5169
+		miss theta: 16.3982
+		error theta: 21.3612
+
+	Baseline:
+
+		Theta: 15.3682
+
+Participant 3:
+	
+	Full Experiment:
+
+		go trial theta: 11.6146
+		nogo trial theta: 11.6796
+
+		correct trial theta: 11.7544
+		successful stop theta: 11.4008
+		failed stop theta: 14.4897
+		miss theta: 8.2968
+		error theta: 17.5247
+
+	Baseline:
+
+		Theta: 11.9712
+
+
+Participant 4:
+
+	Full Experiment:
+
+		go trial theta: 22.3005
+		nogo trial theta: 28.9024
+
+		correct trial theta: 21.4812
+		successful stop theta: 28.441
+		failed stop theta: 31.9382
+		miss theta: 21.9739
+		error theta: 27.7661
+
+	Baseline:
+
+		Theta: 16.5848
+
+WEDNESDAY PARTICIPANTS
+
+Participant 1:
+
+(n=120)
+
+go trial theta: 25.5953
+nogo trial theta: 30.0595
+correct trial theta: 21.8432
+successful stop theta: 30.0595
+failed stop theta: NaN
+miss theta: 35.0135
+error theta: 31.3775
+
+Participant 2:
+
+(n=453)
+
+go trial theta: 12.7145
+nogo trial theta: 15.6346
+correct trial theta: 12.3534
+successful stop theta: 14.2986
+failed stop theta: 22.7595
+miss theta: 23.7325
+error theta: 26.8708
+
+Participant 3:
+
+(n=117)
+
+go trial theta: 9.9906
+nogo trial theta: 11.7498
+correct trial theta: 10.0796
+successful stop theta: 10.3827
+failed stop theta: 11.9508
+miss theta: 9.9883
+error theta: NaN

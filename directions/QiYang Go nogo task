@@ -1,0 +1,78 @@
+QiYang Go nogo task
+
+PRACTICE BLOCKS
+
+	16-20 trials
+
+BACKEND
+	
+	GO NOGO BLOCK (8 blocks)
+
+		background: grey
+		wheel(inside): black
+		dot-on-ring: yellow
+		dot-on-right::after: darker-yellow/darker-purple
+		time spinning on the wheel before it changes color: 300ms
+
+		dot moves for 50ms per point on circumference on the wheel, then changes color for the 50ms, then changes back to original color, then keeps moving for the other half of the "wheel time".
+		the color change "point" should fluctuate between the middle 20%-30%. 
+
+		Ring shows up (before dot appears) = waitSecs(500ms)
+		dot appears @ a random location on the ring
+		dot moves for about 500-700ms
+		changes color ~halfway between 
+		as soon as the dot finishes it's cycle, everything disappears off the screen
+		black screen (retention period) should be 900ms
+		then the ring appears again
+		participant uses the mouse to click on the wheel where the dot changes color
+
+		feedback
+			as soon as they click on the dot, show where the "correct answer" is located, and the distance between the two point using a line
+			feedback 500ms
+
+		iti = 800-1200ms
+
+	MEMORY BASELINE (4 blocks)
+
+		same task, without footpedal response
+
+	PRACTICE BLOCK (8-10 trials)
+
+
+TRIAL SEQUENCE
+
+	half of trials = counterclockwise
+	half of trials = clockwise
+	trials per block = 48
+
+	for go/nogo paradigm, 1/3 should be nogo, 2/3 should be go
+
+
+DATA
+	
+	gender
+	age
+	handedness
+	statistics
+
+BLOCK FEEDBACK
+
+	mean RT
+	% successful stops
+	mean error distance for memory portion
+	% of errors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+CGNG Notes
+
+Baseline == 0 means to run full experiment,
+Baseline == 1 means to run 4 blocks of baseline experiment
+
+Colors == which colors to use for each participant (meant for counterbalancing)
+
