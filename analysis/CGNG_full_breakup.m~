@@ -1,4 +1,16 @@
-function CGNG_full_breakdown(trialseq)
+function theta = CGNG_full_breakup(trialseq,id)
+
+    blocks = trialseq(end,id.block);
+    for ib = 1:blocks
+        blocktrials = trialseq(trialseq(:,id.block) == ib,:);
+        theta = CGNG_full_breakdown(blocktrials,id);
+    end
+
+
+
+end
+
+function theta = CGNG_full_breakdown(trialseq,id)
 
     gotrials = trialseq(trialseq(:,id.stan) == 0,:);
     nogotrials = trialseq(trialseq(:,id.stan) == 1,:);
@@ -17,6 +29,14 @@ function CGNG_full_breakdown(trialseq)
     fs_theta = mean(abs(failstop(:,id.err)));
     miss_theta = mean(abs(miss(:,id.err)));
     error_theta = mean(abs(error(:,id.err)));
+    
+    theta.gotrials = go_theta;
+    theta.nogotrials = nogo_theta;
+    theta.correct = ct_theta;
+    theta.succstop = ss_theta;
+    theta.failstop = fs_theta;
+    theta.miss = miss_theta;
+    theta.error = error_theta;
     
     %     disp(['go trial theta: ' num2str(go_theta)]);
     %     disp(['nogo trial theta: ' num2str(nogo_theta)]);

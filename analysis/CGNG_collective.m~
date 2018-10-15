@@ -1,0 +1,33 @@
+% CGNG Full Analysis Script
+
+id = CGNG_full_columns;
+
+% FOLDERS
+infolder = '/Users/alecmather/Desktop/Wessellab/MATLAB/CGNG/analysis/full_out/';
+outfolder = '/Users/alecmather/Desktop/Wessellab/MATLAB/CGNG/analysis/full_analysis/';
+clocktime = clock; hrs = num2str(clocktime(4)); mins = num2str(clocktime(5));
+outfile = ['Analysis_' date '_' hrs '_' mins '_' '.mat'];
+
+% FILES
+files = dir(fullfile(infolder,'*.mat'));
+filenames = {files.name};
+
+% Data table Overall
+DATA.overall = zeros(length(filenames),7);
+
+for is = 1:length(filenames)
+   
+    load(fullfile(infolder,filenames{is}));
+    behav = CGNG_full_breakup(trialseq,id);
+    
+    DATA.overall(is,1) = behav.overall.gotrials;
+    DATA.overall(is,2) = behav.overall.nogotrials;
+    DATA.overall(is,3) = behav.overall.correct;
+    DATA.overall(is,4) = behav.overall.error;
+    DATA.overall(is,5) = behav.overall.miss;
+    DATA.overall(is,6) = behav.overall.failstop;
+    DATA.overall(is,7) = behav.overall.succstop;
+    
+    DATA.blockwise(
+    
+end
