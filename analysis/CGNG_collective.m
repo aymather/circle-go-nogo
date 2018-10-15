@@ -5,8 +5,8 @@ id = CGNG_full_columns;
 id_baseline = CGNG_baseline_columns;
 
 % FOLDERS
-infolder = '/Users/alecmather/Desktop/Wessellab/MATLAB/CGNG/analysis/full_out/';
-outfolder = '/Users/alecmather/Desktop/Wessellab/MATLAB/CGNG/analysis/finished_analysis/';
+infolder = fullfile(fileparts(which('CGNG_collective')), 'full_out');
+outfolder = fullfile(fileparts(which('CGNG_collective.m')),'finished_analysis');
 clocktime = clock; hrs = num2str(clocktime(4)); mins = num2str(clocktime(5));
 outfile = ['Analysis_' date '_' hrs '_' mins '_' '.mat'];
 
@@ -15,7 +15,7 @@ files = dir(fullfile(infolder,'*.mat'));
 filenames = {files.name};
 
 % FOLDERS_baseline
-infolder_baseline = '/Users/alecmather/Desktop/Wessellab/MATLAB/CGNG/analysis/baseline_out/';
+infolder_baseline = fullfile(fileparts(which('CGNG_collective.m')),'baseline_out');
 clocktime = clock; hrs = num2str(clocktime(4)); mins = num2str(clocktime(5));
 
 % FILES
