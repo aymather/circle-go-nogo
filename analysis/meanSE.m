@@ -23,8 +23,8 @@ function matrix = meanSE(matrix,dimension)
             length = size(matrix,1);
             matrix = [matrix;addition];
             for it = 1:size(matrix,2)
-                matrix(length+1,it) = mean(matrix(1:length,it));
-                matrix(length+2,it) = std(matrix(1:length,it)) / sqrt(length);
+                matrix(length+1,it) = nanmean(matrix(1:length,it));
+                matrix(length+2,it) = nanstd(matrix(1:length,it)) / sqrt(length);
             end
             
         case 2
@@ -33,8 +33,8 @@ function matrix = meanSE(matrix,dimension)
             length = size(matrix,2);
             matrix = [matrix,addition];
             for it = 1:size(matrix,1)
-                matrix(it,length+1) = mean(matrix(it,1:length));
-                matrix(it,length+2) = std(matrix(it,1:length)) / sqrt(length);
+                matrix(it,length+1) = nanmean(matrix(it,1:length));
+                matrix(it,length+2) = nanstd(matrix(it,1:length)) / sqrt(length);
             end
     end
 end
