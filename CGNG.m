@@ -21,7 +21,7 @@ addpath(genpath(fileparts(which('CGNG.m'))));
 data = CGNG_data;     
       
 % DATA COLUMNS
-id = CGNG_columns;        
+id = CGNG_columns(data);        
 
 % SETTINGS          
 settings = CGNG_init(data);
