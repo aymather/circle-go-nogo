@@ -1,5 +1,7 @@
 % CGNG Full Analysis Script
 
+response_1 = input('Would you like to print a data summary?: ');
+
 % get data columns for full exp and baseline exp
 id = CGNG_full_columns;
 id_baseline = CGNG_baseline_columns;
@@ -107,10 +109,81 @@ BASELINE.blockwise = meanSE(BASELINE.blockwise,1);
 
 save(fullfile(outfolder,outfile),'FULL', 'BASELINE');
 
-% filename = 'blockresults.xls';
-% f = table(BASELINE.blockwise);
-% writetable(f,filename);
-% system(['open ' num2str(filename)]);
+if response_1 == 1
 
+    filename = 'overall_fullexp.xls';
+    f = table(FULL.overall);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
 
+    filename = 'blockwise_gotrials.xls';
+    f = table(FULL.blockwise.thetas.gotrials);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
 
+    filename = 'blockwise_nogotrials.xls';
+    f = table(FULL.blockwise.thetas.nogotrials);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_correct.xls';
+    f = table(FULL.blockwise.thetas.correct);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_error.xls';
+    f = table(FULL.blockwise.thetas.error);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_miss.xls';
+    f = table(FULL.blockwise.thetas.miss);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_failstop.xls';
+    f = table(FULL.blockwise.thetas.failstop);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_succstop.xls';
+    f = table(FULL.blockwise.thetas.succstop);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_rt.xls';
+    f = table(FULL.blockwise.rt);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_error_rates.xls';
+    f = table(FULL.blockwise.rate.error);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_miss_rates.xls';
+    f = table(FULL.blockwise.rate.miss);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_failstop_rates.xls';
+    f = table(FULL.blockwise.rate.failstop);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'blockwise_succstop_rates.xls';
+    f = table(FULL.blockwise.rate.succstop);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'baseline_overall.xls';
+    f = table(BASELINE.overall);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+
+    filename = 'baseline_blockwise.xls';
+    f = table(BASELINE.blockwise);
+    writetable(f,filename);
+    system(['open ' num2str(filename)]);
+    
+end
